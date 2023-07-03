@@ -11,7 +11,9 @@
 </head>
 <body>
   <div class="container">
+    <div class="weather-app-wrapper">
     <div class="weather-app">
+      <div class="overview">
       <h1>New York</h1>
       <ul>
         <li>
@@ -21,30 +23,43 @@
           Clear
         </li>
       </ul>
+      </div>
       <div class="row">
         <div class="col-md-6">
-          <img src="images\sun.png" width="100" alt="Clear"/>
-          12&degC | &degF
+          <div class="weather-temperature">
+            <img src="images\sun.png" width="100" alt="Clear"/>
+            <strong>12</strong><span class="units">&degC | 
+              <a href="#">&degF</a></span>
+          </div>         
         </div>
         <div class="col-md-6">
-          <ul>
-            <li>
-              Precipitation: 0%
-            </li>
-            <li>
-              Humidity: 73%
-            </li>
-            <li>
-              Wind 2 km/h
-            </li>
-          </ul>
+          
+            <ul>
+              <li>
+                Precipitation: 0%
+              </li>
+              <li>
+                Humidity: 73%
+              </li>
+              <li>
+                Wind 2 km/h
+              </li>
+            </ul>
+          
         </div>
       </div>
     </div>
-    <small>
-      <a href="https://github.com/mariacamper/Vanilla-Weather-App" target="_blank">Open-source code</a> by Mariathetech
-    </small>
+      <small>
+        <a href="https://github.com/mariacamper/Vanilla-Weather-App" target="_blank">Open-source code</a> by Mariathetech
+      </small>
+    
+    </div>
+    
   </div>
   <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
