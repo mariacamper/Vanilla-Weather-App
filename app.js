@@ -21,7 +21,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-
+  
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
@@ -39,11 +39,17 @@ function displayTemperature(response) {
 
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", response.data.condition.icon_url);
+
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 
 let apiKey = "77ao6ba83c370f60fbc94613061ab8t5";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=New York&key=${apiKey}`;
+let city = "New York";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
 
 axios.get(apiUrl).then(displayTemperature);
