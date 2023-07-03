@@ -27,6 +27,16 @@ li {
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+  text-transform: capitalize;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: right;
+  margin-top: -83px;
+  margin-right: 30px;
+ 
+  
 }
 .weather-app-wrapper {
   max-width: 600px;
